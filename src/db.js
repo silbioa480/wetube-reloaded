@@ -12,3 +12,9 @@ const handleError = (error) => console.log("❌ DB Error: ", error);
 
 db.once("open", handleOpen);
 db.on("error", handleError);
+
+/*
+  if doesn't work 'mongo'
+
+  mongod --config /etc/mongod.conf --fork
+*/
