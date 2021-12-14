@@ -6,7 +6,7 @@
     "url": "git+https://github.com/silbioa480/wetube-reloaded.git"
   },
   "scripts": {
-    "dev": "nodemon -L --exec babel-node src/server.js"
+    "dev": "nodemon -L --exec babel-node src/init.js"
   },
   "license": "ISC",
   "bugs": {
@@ -15,6 +15,7 @@
   "homepage": "https://github.com/silbioa480/wetube-reloaded#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "mongoose": "^6.1.1",
     "morgan": "^1.10.0",
     "pug": "^3.0.2"
   },
