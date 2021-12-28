@@ -3,6 +3,10 @@ import "./models/Video";
 import "./models/User";
 
 /* 
+You can execute this project by inputting below command
+
+npm run dev
+
 "init.js" is first execute file at "package.json"
 
 "scripts": {

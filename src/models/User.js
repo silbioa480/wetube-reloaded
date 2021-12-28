@@ -9,6 +9,9 @@ const userSchema = new mongoose.Schema({
   location: String,
 });
 
+// Schema.Pre() is Mongoose's Middleware function.
+// When Schema saved,
+// password is casted encrypting password by hash.
 userSchema.pre("save", async function () {
   this.password = await bcrypt.hash(this.password, 5);
 });

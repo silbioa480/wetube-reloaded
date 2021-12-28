@@ -11,6 +11,7 @@ const videoSchema = new mongoose.Schema({
   },
 });
 
+// Schema.static() is add new custom method in Schema.
 videoSchema.static("formatHashtags", function (hashtags) {
   return hashtags
     .split(",")

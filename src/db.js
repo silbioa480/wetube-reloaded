@@ -1,12 +1,14 @@
-// MongoDB is a general purpose, document-based, distributed
-// database built for modern application developer and
-// for the cloud era.
-// https://www.mongodb.com/
+/* 
+MongoDB is a general purpose, document-based, distributed
+database built for modern application developer and
+for the cloud era.
+https://www.mongodb.com/
 
-// https://velog.io/@ckstn0777/Mongoose-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0
+MongoDb vs Mongoose
+https://velog.io/@ckstn0777/Mongoose-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0
 
-// Mongoose is elegant mongodb object modeling for node.js.
-// https://mongoosejs.com/
+Mongoose is elegant mongodb object modeling for node.js.
+https://mongoosejs.com/ */
 import mongoose from "mongoose";
 
 // mongoose.connect(url + database)

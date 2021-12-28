@@ -47,17 +47,25 @@ reading information from html form tag. */
 app.use(express.urlencoded({ extended: true }));
 
 /* 
-Router is a object is an isolated instance of middleware and routes. 
+Router is an object is an isolated instance of middleware and routes. 
 You can think of it as a “mini-application,” 
 capable only of performing middleware and routing functions. 
 Every Express application has a built-in app router.
 http://expressjs.com/en/5x/api.html#router */
 
 /*
-/ -> Home
-/join -> Join
-/login -> Login
-/search -> Search  */
+/ 
+    videoController.home
+        get: views/home.pug
+/join
+    userController{getJoin, postJoin}
+        get: views/join.pug, 
+        post: models/Users.create(name, username, email, password, location)
+/login
+    userController.login
+/search
+    videoController.searchVideo
+        get: views/search.pug  */
 app.use("/", rootRouter);
 
 /*
@@ -68,10 +76,20 @@ app.use("/", rootRouter);
 app.use("/users", userRouter);
 
 /*
-/videos/:id -> See Video
-/videos/:id/edit -> Edit Video
-/videos/:id/delete -> Delete Video
-/videos/upload -> Upload Video
+/videos/:id
+    videoController.watchVideo
+        get: views/watch.pug
+/videos/:id/edit
+    videoController{getEdit, postEdit}
+        get: views/edit.pug,
+        post: models/Video.findByIdAndUpdate(id, title, description, hashtags)
+/videos/:id/delete
+    videoController.deleteVideo
+        post: models/Video.findByIdAndDelete(id)
+/videos/upload
+    videoController{getUpload, postUpload} 
+        get: views/upload.pug
+        post: models/Video.create(title, description, hashtags)
 
 /videos/comments -> Comment on a Video
 /videos/comments/delete -> Delete A Comment of a Video  */
