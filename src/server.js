@@ -22,7 +22,7 @@ implemented with JavaScript for Node.js and browsers.
 https://pugjs.org/api/getting-started.html
 
 app.set("view engine", "pug"); means
-using pug as html helper(view engine) to Express. */
+use pug as html helper(view engine) to Express. */
 app.set("view engine", "pug");
 // views folder save .pug files.
 // views directory path = workspace path + "/src/views"
@@ -31,7 +31,7 @@ app.set("views", process.cwd() + "/src/views");
 /* 
 Morgan is HTTP request logger middleware for node.js.
 https://www.npmjs.com/package/morgan
-using Morgan API for checking log. */
+use Morgan API for checking log. */
 const logger = morgan("dev");
 app.use(logger);
 
